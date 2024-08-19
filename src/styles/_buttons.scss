@@ -1,0 +1,48 @@
+.hero-title,
+button {
+  text-align: center;
+  align-content: center;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  border-radius: 40px;
+  height: 84px;
+  padding: 6px 48px 6px 48px;
+  border: solid $black 1px;
+  box-shadow: 0 4px 4px 0;
+  transition: all ease 1s;
+}
+
+.conic-gradient {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.conic-gradient:after {
+  content: '';
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: -12rem; right: 0; bottom: -12rem; left: 0;
+  background: repeating-conic-gradient(
+    $dark-green 0%,
+    $green 15%,
+    $white 33%
+  );
+  animation: rotate-gradient linear 8s infinite;
+  animation-play-state: paused;
+}
+
+.zoom:hover {
+
+  transform: scale(1.2, 1.2);
+}
+
+button.conic-gradient:hover:after {
+  animation-play-state: running;
+}
+
+@keyframes rotate-gradient {
+  to { transform: rotate(360deg) }
+}
