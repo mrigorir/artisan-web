@@ -1,0 +1,34 @@
+<div class="row position-relative">
+  <div class="col-md-12">
+    <img
+      src="./assets/images/section-1/bubble-1.svg"
+      alt="bubble-1"
+      class="bubble-1"
+    />
+    <ul class="list-unstyled d-flex align-items-center justify-content-between">
+      <li class="hide">Artisans web</li>
+      <li class="artisan">
+        @if (darkMode) {
+        <img src="./assets/logo/logo_dark_theme.svg" alt="logo_artisan_web" />
+        } @else {
+        <img src="./assets/logo/logo_light_theme.svg" alt="logo_artisan_web" />
+        }
+      </li>
+      <li class="d-flex align-items-center justify-content-center pe-5">
+        <button (click)="setDarkMode()" class="transparent-button">
+          <img
+            [src]="
+              !darkMode
+                ? './assets/images/section-1/moon_light_theme.svg'
+                : './assets/images/section-1/sun_dark_theme.svg'
+            "
+            alt="moon & sun"
+            [ngClass]="darkMode ? 'moon-rotation' : 'sun-rotation'"
+          />
+        </button>
+        <i class="bi bi-list fs-1" [ngClass]="darkMode ? 'text-white' : ''"></i>
+      </li>
+    </ul>
+  </div>
+</div>
+

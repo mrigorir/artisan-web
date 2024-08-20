@@ -1,3 +1,4 @@
+//primary colors
 $white: #fff;
 $black: #000;
 $gray: #D9D9D9;
@@ -5,3 +6,37 @@ $green: #74DD63;
 $dark-green: #1BC300;
 $dark-gray: #B0B0B0;
 
+//gradient body colors
+$light-gradient-1: #e4f7ba;
+$light-gradient-2: #fefefd;
+$light-gradient-3: #caee92;
+$light-gradient-4: #baeba1;
+$light-gradient-5: #dffbd1;
+
+$dark-gradient-1: #0c4b09;
+$dark-gradient-2: #080a09;
+$dark-gradient-3: #032403;
+$dark-gradient-4: #1b1b1b;
+$dark-gradient-5: #062b04;
+$dark-gradient-6: #2c2c2c;
+
+$darkTheme: linear-gradient(
+  120deg,
+  $black,
+  $dark-gradient-1,
+  $dark-gradient-2,
+  $dark-gradient-3,
+  $dark-gradient-4,
+  $dark-gradient-5,
+  $dark-gradient-6
+);
+
+$lightTheme: linear-gradient(
+  120deg,
+  $white,
+  $light-gradient-1,
+  $light-gradient-2,
+  $light-gradient-3,
+  $light-gradient-4,
+  $light-gradient-5
+);

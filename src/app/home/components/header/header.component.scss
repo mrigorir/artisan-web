@@ -1,6 +1,46 @@
 @import "../../../../styles.scss";
 
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.moon-rotation {
+  transform: scaleX(-1);
+}
+
+.sun-rotation {
+  transform: scaleX(1);
+}
+
+.sun-rotation,
+.moon-rotation {
+  transition: all ease 1s;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.bubble-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media (max-width: 500px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.artisan {
+  @media (min-width: 768px) {
+    margin-left: 80px;
+  }
+}
+
 .hero-title {
   background: $green;
   background: linear-gradient(248deg, $green 0%, $white 100%);
 }
+

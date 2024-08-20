@@ -1,4 +1,7 @@
-<div class="container">
-  <heading />
-</div>
+<body [ngClass]="_darkMode() ? 'darkTheme' : 'lightTheme' " class="vh-100">
+  <div class="container-full">
+    <heading (onSetDarkMode)="setTheme($event)" />
+  </div>
+</body>
+
 

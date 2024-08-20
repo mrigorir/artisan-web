@@ -13,29 +13,28 @@ button {
   transition: all ease 1s;
 }
 
-.conic-gradient {
+button.conic-gradient {
   position: relative;
   overflow: hidden;
   background-color: transparent;
 }
 
-.conic-gradient:after {
+button.conic-gradient:after {
   content: '';
   display: block;
-  z-index: -1;
   position: absolute;
+  z-index: -1;
   top: -12rem; right: 0; bottom: -12rem; left: 0;
   background: repeating-conic-gradient(
     $dark-green 0%,
-    $green 15%,
-    $white 33%
+    $white 15%,
+    $green 33%
   );
   animation: rotate-gradient linear 8s infinite;
   animation-play-state: paused;
 }
 
 .zoom:hover {
-
   transform: scale(1.2, 1.2);
 }
 

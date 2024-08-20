@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, OnInit, signal } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { TemplatesComponent } from './components/templates/templates.component';
 
@@ -11,4 +11,11 @@ import { TemplatesComponent } from './components/templates/templates.component';
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class HomeComponent {}
+export default class HomeComponent {
+  darkMode = signal<boolean>(false);
+  _darkMode = computed(() => this.darkMode());
+
+  setTheme(value: boolean) {
+    this.darkMode.set(value);
+ }
+}
