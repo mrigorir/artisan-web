@@ -1,0 +1,41 @@
+.bubbles {
+  position: absolute;
+  border-radius: 100%;
+  animation: spin-animation 5s ease infinite;
+}
+
+.bubble-gray {
+  background: $gradient-gray;
+}
+
+.bubble-green {
+  background: $gradient-green;
+}
+
+.bubble-rotateX {
+  transform: rotateX(20deg) scale(0.8);
+}
+
+.bubble-dashed-gray {
+  border: dashed 5px hsla(0, 0, 0, .5);
+}
+
+.bubble-solid-gray {
+  border: solid 5px hsla(0, 0, 0, .5);
+}
+
+.bubble-dashed-green {
+  border: dashed 3px $dark-green;
+}
+
+.bubble-shadow-gray {
+  box-shadow: 4px 4px 4px rgb(52, 51, 51)
+}
+
+.bubble-shadow-green {
+  box-shadow: 4px 4px 4px $dark-green;
+}
+
+@keyframes spin-animation {
+  to { rotate: 360deg }
+}

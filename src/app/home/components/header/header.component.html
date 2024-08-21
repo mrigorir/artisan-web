@@ -1,20 +1,27 @@
-<div class="row position-relative">
+<div class="row">
   <div class="col-md-12">
-    <img
-      src="./assets/images/section-1/bubble-1.svg"
-      alt="bubble-1"
-      class="bubble-1"
-    />
-    <ul class="list-unstyled d-flex align-items-center justify-content-between">
-      <li class="hide">Artisans web</li>
+    <div class="bubbles bubble-gray bubble-1 bubble-dashed-gray"></div>
+    <div class="bubbles bubble-green bubble-2 bubble-shadow-green"></div>
+    <ul
+      class="list-unstyled d-flex align-items-center justify-content-center justify-content-md-between"
+    >
+      <li class="hide d-none d-md-block">Artisans web</li>
       <li class="artisan">
         @if (darkMode) {
-        <img src="./assets/logo/logo_dark_theme.svg" alt="logo_artisan_web" />
+        <img
+          src="./assets/logo/logo_dark_theme.svg"
+          alt="logo_artisan_web"
+          class="img-logo"
+        />
         } @else {
-        <img src="./assets/logo/logo_light_theme.svg" alt="logo_artisan_web" />
+        <img
+          src="./assets/logo/logo_light_theme.svg"
+          alt="logo_artisan_web"
+          class="img-logo"
+        />
         }
       </li>
-      <li class="d-flex align-items-center justify-content-center pe-5">
+      <li class="d-flex align-items-center justify-content-center pe-md-5">
         <button (click)="setDarkMode()" class="transparent-button">
           <img
             [src]="
@@ -23,12 +30,64 @@
                 : './assets/images/section-1/sun_dark_theme.svg'
             "
             alt="moon & sun"
+            class="theme-img"
             [ngClass]="darkMode ? 'moon-rotation' : 'sun-rotation'"
           />
         </button>
-        <i class="bi bi-list fs-1" [ngClass]="darkMode ? 'text-white' : ''"></i>
+        <i
+          class="bi bi-list fs-1 px-3"
+          [ngClass]="darkMode ? 'text-white' : ''"
+        ></i>
       </li>
     </ul>
   </div>
 </div>
 
+<div class="row mt-5">
+  <div
+    class="col-md-12 flex-wrap d-flex align-items-center justify-content-center"
+  >
+    <div
+      class="col-12 col-lg-6 ps-0 mb-5 mb-md-0 ps-lg-5 d-flex flex-wrap flex-column align-items-center justify-content-center"
+    >
+      <p
+        class="heading-text px-3 px-lg-0"
+        [ngClass]="darkMode ? 'text-white' : ''"
+      >
+        Crear tu web site, o landing page personalizada, ya no será tan
+        complicado.
+      </p>
+      <p
+        class="heading-subtext px-3 px-lg-0"
+        [ngClass]="darkMode ? 'text-white' : ''"
+      >
+        WordPress, a pesar de ser el CMS por excelencia, ya no se adapta a lo
+        que deseas.
+      </p>
+      <button class="btn conic-gradient zoom">Ver planes</button>
+    </div>
+    <div
+      class="mt-5 col-12 col-lg-6 d-flex flex-wrap align-items-center justify-content-center position-relative"
+    >
+      <div
+        class="bubbles bubble-green bubble-3 bubble-shadow-green bubble-rotateX"
+      ></div>
+      <img
+        src="./assets/images/section-1/laptop.png"
+        alt=""
+        class="img-fluid laptop"
+      />
+      <div
+        class="bubbles bubble-gray bubble-4 bubble-rotateX bubble-shadow-gray"
+      ></div>
+    </div>
+  </div>
+</div>
+
+<div class="row spacer">
+  <div class="col-md-12">
+    <div class="hero-title mx-auto mb-5">
+      Somos la agencia de desarrollo web con el mejor crecimiento del mercado
+    </div>
+  </div>
+</div>

@@ -11,8 +11,7 @@
 .darkTheme,
 .lightTheme {
   background-size: 3000% 3000%;
-  transition: all ease-in-out 10s;
-  animation: gradient-animation 15s ease infinite;
+  animation: gradient-animation 20s ease infinite;
 }
 
 @keyframes gradient-animation {

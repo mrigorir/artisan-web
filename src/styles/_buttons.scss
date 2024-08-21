@@ -11,6 +11,7 @@ button {
   border: solid $black 1px;
   box-shadow: 0 4px 4px 0;
   transition: all ease 1s;
+  z-index: 1;
 }
 
 button.conic-gradient {
@@ -19,14 +20,14 @@ button.conic-gradient {
   background-color: transparent;
 }
 
-button.conic-gradient:after {
+button.conic-gradient::after {
   content: '';
   display: block;
   position: absolute;
   z-index: -1;
   top: -12rem; right: 0; bottom: -12rem; left: 0;
   background: repeating-conic-gradient(
-    $dark-green 0%,
+    $mid-green 0%,
     $white 15%,
     $green 33%
   );

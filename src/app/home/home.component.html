@@ -1,6 +1,7 @@
-<body [ngClass]="_darkMode() ? 'darkTheme' : 'lightTheme' " class="vh-100">
-  <div class="container-full">
+<body [ngClass]="_darkMode() ? 'darkTheme' : 'lightTheme' ">
+  <div class="container-full position-relative">
     <heading (onSetDarkMode)="setTheme($event)" />
+    
   </div>
 </body>
 

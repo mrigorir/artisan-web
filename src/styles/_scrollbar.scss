@@ -1,6 +1,6 @@
 /* width */
 ::-webkit-scrollbar {
-  width: 0.35rem;
+  width: .5rem;
 }
 
 /* Track */
@@ -10,7 +10,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: $dark-green;
   border-radius: 2rem;
 }
 

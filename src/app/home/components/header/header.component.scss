@@ -4,6 +4,9 @@
   background-color: transparent;
   border: none;
   box-shadow: none;
+  @media (max-width: 600px) {
+    padding: 0;
+  }
 }
 
 .moon-rotation {
@@ -24,12 +27,94 @@
 }
 
 .bubble-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  @media (max-width: 500px) {
+  top: -20px;
+  left: -30px;
+  width: 200px;
+  height: 200px;
+  @media (max-width: 1280px) {
     width: 100px;
     height: 100px;
+  }
+}
+
+.bubble-2 {
+  top: 700px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  @media (max-width: 600px) {
+    top: 1000px;
+    width: 250px;
+    height: 250px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    top: 1150px;
+    width: 250px;
+    height: 250px;
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    top: 600px;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.bubble-3 {
+  top: -80px;
+  right: 350px;
+  width: 200px;
+  height: 200px;
+  animation-duration: 10s;
+  @media (max-width: 600px) {
+    top: -40px;
+    right: 120px;
+    width: 100px;
+    height: 100px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    top: 50px;
+    right: 100px;
+    width: 180px;
+    height: 180px;
+  }
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    right: 120px;
+  }
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    right: 200px;
+  }
+}
+
+.bubble-4 {
+  top: 500px;
+  right: 100px;
+  width: 180px;
+  height: 180px;
+  @media (max-width: 600px) {
+    top: 300px;
+    right: 50px;
+    width: 120px;
+    height: 120px;
+  }
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    top: 400px;
+  }
+}
+
+.laptop {
+  z-index: 1;
+}
+
+.img-logo {
+  @media (max-width: 600px) {
+    width: 250px;
+    margin-left: 30px;
+  }
+}
+
+.theme-img {
+  @media (max-width: 600px) {
+    width: 40px;
   }
 }
 
@@ -39,8 +124,49 @@
   }
 }
 
-.hero-title {
-  background: $green;
-  background: linear-gradient(248deg, $green 0%, $white 100%);
+.heading-text {
+  font-size: 45px;
+  line-height: 56.25px;
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
+  @media (min-width: 768px) and (max-width: 1200px) {
+    font-size: 30px;
+  }
 }
 
+.heading-subtext {
+  line-height: 30px;
+  margin: 80px 0 80px 0;
+}
+
+.heading-subtext,
+.hero-title {
+  font-size: 30px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+.heading-subtext,
+.heading-text,
+.hero-title {
+  font-weight: 400;
+  text-align: center;
+}
+
+.spacer {
+  margin-top: 250px;
+}
+
+.hero-title {
+  line-height: 37.5px;
+  width: 90%;
+  background: $green;
+  background: $gradient-green;
+  @media (max-width: 600px) {
+    width: 90%;
+    line-height: initial;
+    height: auto;
+  }
+}
