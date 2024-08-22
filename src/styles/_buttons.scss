@@ -5,7 +5,7 @@ button {
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
-  border-radius: 40px;
+  border-radius: 10px;
   height: 84px;
   padding: 6px 48px 6px 48px;
   border: solid $black 1px;
@@ -19,14 +19,28 @@ button.plans {
   font-weight: bold;
   position: relative;
   border: solid 3px;
-  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-  //background: linear-gradient(90deg, #95e984, #c5d4ed, #eee0e0, #b1eac5);
-  background-size: 400% 400%;
   z-index: 1;
-  animation: animate 8s linear infinite;
 }
 
-button.plans:before {
+button.plans-dark {
+  animation: pulse-dark 2s linear infinite;
+  background: linear-gradient(90deg, #03f40f, #d6f441, #24ffcf, #23f403);
+}
+
+button.plans-light {
+  background: linear-gradient(90deg, #03a9f4, #41f4a6, #fce300, #03a9f4);
+  //background: linear-gradient(90deg, #95e984, #c5d4ed, #eee0e0, #b1eac5);
+  animation: pulse-light 2s linear infinite;
+
+}
+
+button.plans-light,
+button.plans-dark {
+  background-size: 400% 400%;
+}
+
+button.plans-light:before,
+button.plans-dark:before {
   content: "";
   position: absolute;
   top: -5px;
@@ -36,32 +50,42 @@ button.plans:before {
   z-index: -1;
   background-size: 400%;
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
 }
 
-// button.conic-gradient {
-//   overflow: hidden;
-//   border: solid 2px;
-//   background-size: 200% auto;
-//   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-//   background-image: linear-gradient(
-//     to right,
-//     $green 0%,
-//     $white 50%,
-//     $green 100% );
-//   transition: 0.5s;
-// }
-
-@keyframes animate {
-  0% {
+@keyframes pulse-dark {
+	0% {
+		box-shadow: 0 0 0 10px rgb(113, 252, 0, 0.7);
     background-position: 0%;
-  }
-  100% {
+	}
+
+	70% {
+		box-shadow: 0 0 0 20px rgba(34, 255, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
     background-position: 400%;
-  }
+	}
+}
+
+@keyframes pulse-light {
+	0% {
+		box-shadow: 0 0 0 10px rgb(20, 225, 10);
+    background-position: 0%;
+	}
+
+	70% {
+		box-shadow: 0 0 0 20px rgba(30, 239, 2, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(4, 240, 4, 0);
+    background-position: 400%;
+	}
 }
 
 .zoom:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2) rotate(10deg);
   background-position: right center;
 }

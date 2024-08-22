@@ -64,7 +64,7 @@
         WordPress, a pesar de ser el CMS por excelencia, ya no se adapta a lo
         que deseas.
       </p>
-      <button class="btn plans zoom">{{ textButton() }}</button>
+      <button class="btn plans zoom" [ngClass]="darkMode ? 'plans-dark' : 'plans-light'">{{ textButton() }}</button>
     </div>
     <div
       class="mt-5 col-12 col-lg-6 d-flex flex-wrap align-items-center justify-content-center position-relative"
@@ -85,9 +85,18 @@
 </div>
 
 <div class="row spacer">
-  <div class="col-md-12">
-    <div class="hero-title mx-auto mb-5">
-      Somos la agencia de desarrollo web con el mejor crecimiento del mercado
+  <div class="col-md-12 d-flex align-items-center justify-content-center">
+    <div class="hero-title mb-5">
+      <div class="hero-title-ticker">
+        <p class="hero-title-text">
+          <i class="bi bi-hammer pe-2"></i>
+          <span>
+            Somos la agencia de desarrollo web con el mejor crecimiento del
+            mercado</span
+          >
+          <i class="bi bi-hammer ps-2"></i>
+        </p>
+      </div>
     </div>
   </div>
 </div>

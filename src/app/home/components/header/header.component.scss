@@ -150,13 +150,20 @@
 }
 
 .heading-subtext,
-.heading-text,
-.hero-title {
-  font-weight: 400;
+.heading-text {
   text-align: center;
 }
 
+.heading-subtext,
+.heading-text,
 .hero-title {
+  font-weight: 400;
+}
+
+.hero-title {
+  box-sizing: content-box;
+  border-radius: 40px;
+  overflow: hidden;
   line-height: 37.5px;
   width: 85%;
   background: $green;
@@ -165,5 +172,31 @@
     width: 90%;
     line-height: initial;
     height: auto;
+  }
+}
+
+.hero-title-ticker {
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  box-sizing: content-box;
+  animation: ticker 15s linear infinite;
+}
+
+.hero-title-text {
+  display: inline-block;
+  padding: 0 10rem;
+  font-size: 2rem;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
   }
 }
