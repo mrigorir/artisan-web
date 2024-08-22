@@ -1,1 +1,65 @@
-<p>templates works!</p>,
+<div class="position-relative">
+  <div class="row my-5 d-flex align-items-center justify-content-center">
+    @for (temp of templates; track $index) {
+    <div
+      class="template mb-5 mb-lg-0 me-lg-5 mt-md-5"
+      [ngClass]="$index == 0 ? 'me-lg-5' : ''"
+    >
+      <h1 class="template-text">
+        {{ temp.title }} <br />
+        {{ temp.subtitle }}
+      </h1>
+    </div>
+    }
+    <div class="bubbles bubble-5 bubble-green bubble-shadow-green d-none d-xxl-block"></div>
+    <div
+      class="bubbles bubble-6 bubble-gray bubble-shadow-gray bubble-rotateX d-none d-xxl-block"
+    ></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <h1
+          class="template-body-text"
+          [ngClass]="darkMode() ? 'text-white' : 'text-black'"
+        >
+          Con tu suscripción, actualiza, rediseña, y agrega componentes cuando
+          lo desees.
+        </h1>
+        <h3
+          class="template-body-subtext mt-5"
+          [ngClass]="darkMode() ? 'text-white' : 'text-black'"
+        >
+          Programar con lenguajes de código abierto, es la forma mas escalable y
+          segura para tus web sites.
+        </h3>
+        <button class="mt-5 template-call-button zoom">Reservar Llamada</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row pb-5">
+    <div class="d-flex align-items-center justify-content-evenly flex-wrap">
+      @for (feat of features; track $index) {
+      <div class="template-features" [ngClass]="$index == 1 ? 'mt-100' : ''">
+        <p
+          class="template-features-text mb-5"
+          [ngClass]="darkMode() ? 'text-white' : 'text-black'"
+        >
+          {{ feat.text }}
+        </p>
+        <img [src]="feat.src" alt="artesans-features" />
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="row mt-5 me-lg-3">
+    <div class="col-md-12 d-flex align-items-center justify-content-center">
+      <button class="btn plans zoom">{{ textButton() }}</button>
+    </div>
+  </div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

@@ -1,7 +1,7 @@
 <body [ngClass]="_darkMode() ? 'darkTheme' : 'lightTheme' ">
   <div class="container-full position-relative">
-    <heading (onSetDarkMode)="setTheme($event)" />
-    
+    <heading (onSetDarkMode)="setTheme($event)" [textButton]="_textButton()" />
+    <templates [darkMode]="_darkMode()" [textButton]="_textButton()" />
   </div>
 </body>
 

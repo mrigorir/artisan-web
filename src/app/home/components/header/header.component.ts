@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  input,
   OnInit,
   output,
 } from '@angular/core';
@@ -16,6 +17,7 @@ import {
 export class HeaderComponent implements OnInit {
   darkMode: boolean = false;
   onSetDarkMode = output<boolean>();
+  textButton = input.required<string>();
 
   ngOnInit(): void {
     if (localStorage.getItem('darkTheme') === 'true') {

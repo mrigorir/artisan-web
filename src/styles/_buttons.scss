@@ -14,35 +14,54 @@ button {
   z-index: 1;
 }
 
-button.conic-gradient {
+button.plans {
+  color: $black;
+  font-weight: bold;
   position: relative;
-  overflow: hidden;
-  background-color: transparent;
+  border: solid 3px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  //background: linear-gradient(90deg, #95e984, #c5d4ed, #eee0e0, #b1eac5);
+  background-size: 400% 400%;
+  z-index: 1;
+  animation: animate 8s linear infinite;
 }
 
-button.conic-gradient::after {
-  content: '';
-  display: block;
+button.plans:before {
+  content: "";
   position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
   z-index: -1;
-  top: -12rem; right: 0; bottom: -12rem; left: 0;
-  background: repeating-conic-gradient(
-    $mid-green 0%,
-    $white 15%,
-    $green 33%
-  );
-  animation: rotate-gradient linear 8s infinite;
-  animation-play-state: paused;
+  background-size: 400%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+// button.conic-gradient {
+//   overflow: hidden;
+//   border: solid 2px;
+//   background-size: 200% auto;
+//   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+//   background-image: linear-gradient(
+//     to right,
+//     $green 0%,
+//     $white 50%,
+//     $green 100% );
+//   transition: 0.5s;
+// }
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
 
 .zoom:hover {
   transform: scale(1.2, 1.2);
-}
-
-button.conic-gradient:hover:after {
-  animation-play-state: running;
-}
-
-@keyframes rotate-gradient {
-  to { transform: rotate(360deg) }
+  background-position: right center;
 }
