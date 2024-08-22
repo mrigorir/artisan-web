@@ -8,7 +8,7 @@ button {
   border-radius: 10px;
   height: 84px;
   padding: 6px 48px 6px 48px;
-  border: solid $black 1px;
+  //border: solid $black 1px;
   box-shadow: 0 4px 4px 0;
   transition: all ease 1s;
   z-index: 1;
@@ -18,7 +18,7 @@ button.plans {
   color: $black;
   font-weight: bold;
   position: relative;
-  border: solid 3px;
+  //border: solid 3px;
   z-index: 1;
 }
 
@@ -55,7 +55,7 @@ button.plans-dark:before {
 
 @keyframes pulse-dark {
 	0% {
-		box-shadow: 0 0 0 10px rgb(113, 252, 0, 0.7);
+		box-shadow: 0 0 0 3px rgba(113, 252, 0, 0.3);
     background-position: 0%;
 	}
 
@@ -71,7 +71,7 @@ button.plans-dark:before {
 
 @keyframes pulse-light {
 	0% {
-		box-shadow: 0 0 0 10px rgb(20, 225, 10);
+		box-shadow: 0 0 0 3px rgb(21, 225, 10);
     background-position: 0%;
 	}
 
