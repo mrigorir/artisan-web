@@ -1,22 +1,11 @@
 <div class="position-relative">
-  <div class="row my-5 d-flex align-items-center justify-content-center">
-    @for (temp of templates; track $index) {
-    <div
-      class="template mb-5 mb-lg-0 me-lg-5 mt-md-5"
-      [ngClass]="$index == 0 ? 'me-lg-5' : ''"
-    >
-      <h1 class="template-text">
-        {{ temp.title }} <br />
-        {{ temp.subtitle }}
-      </h1>
-    </div>
-    }
-    <div class="bubbles bubble-5 bubble-green bubble-shadow-green d-none d-xxl-block"></div>
-    <div
-      class="bubbles bubble-6 bubble-gray bubble-shadow-gray bubble-rotateX d-none d-xxl-block"
-    ></div>
-  </div>
-
+  <template-slider />
+  <div
+    class="bubbles bubble-5 bubble-green bubble-shadow-green d-none d-xxl-block"
+  ></div>
+  <div
+    class="bubbles bubble-6 bubble-gray bubble-shadow-gray bubble-rotateX d-none d-xxl-block"
+  ></div>
   <div class="row">
     <div class="col-md-12">
       <div class="d-flex flex-column align-items-center justify-content-center">

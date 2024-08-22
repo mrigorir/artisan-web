@@ -1,40 +1,5 @@
 @import "../../../../styles.scss";
 
-.template {
-  width: 370px;
-  height: 400px;
-  border: solid 45px $gray;
-  border-radius: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background-color: $black;
-  flex-wrap: wrap;
-  @media (max-width: 600px) {
-    width: 300px;
-    height: 300px;
-  }
-  @media (min-width: 768px) and (max-width: 1023px) {
-
-  }
-  @media (min-width: 1024px) and (max-width: 1279px) {
-
-  }
-  @media (min-width: 1280px) and (max-width: 1440px) {
-
-  }
-}
-
-.template-text {
-  font-size: 40px;
-  line-height: 42.2px;
-  color: $white;
-  @media (max-width: 600px) {
-    font-size: 30px;
-  }
-}
-
 .template-body-text {
   font-size: 45px;
   line-height: 56.25px;
@@ -87,10 +52,6 @@
   font-family: 'Raleway';
 }
 
-.template-text {
-  font-family: "Wendy One";
-}
-
 .template-body-subtext,
 .template-features-text {
   font-size: 25px;
@@ -103,8 +64,7 @@
 
 .template-features-text,
 .template-body-subtext,
-.template-body-text,
-.template-text {
+.template-body-text {
   font-weight: 400;
   text-align: center;
 }

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { TemplateSliderComponent } from '../template-slider/template-slider.component';
 
 @Component({
   selector: 'templates',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TemplateSliderComponent],
   templateUrl: './templates.component.html',
   styleUrl: './templates.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,20 +13,6 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 export class TemplatesComponent {
   textButton = input.required<string>();
   darkMode = input.required<boolean>();
-  templates = [
-    {
-      title: 'Plantilla',
-      subtitle: '1 VER'
-    },
-    {
-      title: 'Plantilla',
-      subtitle: '2 VER'
-    },
-    {
-      title: 'Plantilla',
-      subtitle: '3 VER'
-    }
-  ];
   features = [
     {
       text: 'Suscríbete a un plan y haz que tu web site sea una realidad',

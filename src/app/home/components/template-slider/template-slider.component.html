@@ -1,0 +1,53 @@
+<!-- templates without slider -->
+<div
+class="row my-5 d-flex align-items-center justify-content-center hide ms-lg-5"
+>
+@for (temp of templates; track $index) {
+<div
+  class="template mb-5 mb-lg-0 me-lg-5 mt-md-5"
+  [ngClass]="$index == 0 ? 'me-lg-5' : ''"
+>
+  <h1 class="template-text">
+    {{ temp.title }} <br />
+    {{ temp.subtitle }}
+  </h1>
+</div>
+}
+</div>
+
+<!-- templates with slider -->
+<div id="templates" class="row my-5 carousel d-block d-lg-none">
+  <div class="carousel-inner">
+    @for (temp of templates; track $index) {
+    <div class="carousel-item" [ngClass]="$index == 0 ? 'active' : ''">
+      <div class="template">
+        <h1 class="template-text">
+          {{ temp.title }} <br />
+          {{ temp.subtitle }}
+        </h1>
+      </div>
+    </div>
+    }
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#templates"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#templates"
+    data-bs-slide="next"
+  >
+    <span
+      class="carousel-control-next-icon"
+      aria-hidden="true"
+    ></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
