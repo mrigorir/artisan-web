@@ -8,7 +8,6 @@ button {
   border-radius: 10px;
   height: 84px;
   padding: 6px 48px 6px 48px;
-  //border: solid $black 1px;
   box-shadow: 0 4px 4px 0;
   transition: all ease 1s;
   z-index: 1;
@@ -18,7 +17,6 @@ button.plans {
   color: $black;
   font-weight: bold;
   position: relative;
-  //border: solid 3px;
   z-index: 1;
 }
 
@@ -30,6 +28,7 @@ button.plans-dark {
 button.plans-light {
   background: linear-gradient(90deg, #03a9f4, #41f4a6, #fce300, #03a9f4);
   //background: linear-gradient(90deg, #95e984, #c5d4ed, #eee0e0, #b1eac5);
+  //background: $gradient-green;
   animation: pulse-light 2s linear infinite;
 
 }
