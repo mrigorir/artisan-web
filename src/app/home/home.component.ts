@@ -22,6 +22,7 @@ export default class HomeComponent {
   darkMode = signal<boolean>(false);
   _darkMode = computed(() => this.darkMode());
   _textButton = computed(() => this.textButton());
+  fakeArray = new Array(50);
 
   setTheme(value: boolean) {
     this.darkMode.set(value);

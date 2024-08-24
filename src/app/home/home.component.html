@@ -1,8 +1,7 @@
-<body [ngClass]="_darkMode() ? 'darkTheme' : 'lightTheme' ">
-  <div class="container-full position-relative">
+<body class="stars" [ngClass]="_darkMode() ? 'darkTheme' : 'lightTheme' ">
+  <div class="star" *ngFor="let a of fakeArray; let index = index"></div>
+  <section class="container-full main-content position-relative">
     <heading (onSetDarkMode)="setTheme($event)" [textButton]="_textButton()" />
     <templates [darkMode]="_darkMode()" [textButton]="_textButton()" />
-  </div>
+  </section>
 </body>
-
-

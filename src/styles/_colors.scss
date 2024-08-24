@@ -21,20 +21,23 @@ $dark-gradient-1: #000010;
 $dark-gradient-2: #111111;
 $dark-gradient-3: #060006;
 
-$darkTheme: linear-gradient(
-  120deg,
-  $black,
-  $dark-gradient-1,
-  $dark-gradient-2,
-  $dark-gradient-3
-);
+$dark-theme: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+$light-theme: radial-gradient(ellipse at bottom, #77ffa7 0%, #ffffff 100%);
 
-$lightTheme: linear-gradient(
-  120deg,
-  $white,
-  $light-gradient-1,
-  $light-gradient-2,
-  $light-gradient-3,
-  $light-gradient-4,
-  $light-gradient-5
-);
+// $darkTheme: linear-gradient(
+//   120deg,
+//   $black,
+//   $dark-gradient-1,
+//   $dark-gradient-2,
+//   $dark-gradient-3
+// );
+
+// $lightTheme: linear-gradient(
+//   120deg,
+//   $white,
+//   $light-gradient-1,
+//   $light-gradient-2,
+//   $light-gradient-3,
+//   $light-gradient-4,
+//   $light-gradient-5
+// );
