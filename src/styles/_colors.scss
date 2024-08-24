@@ -1,43 +1,26 @@
 //primary colors
 $white: #fff;
 $black: #000;
-$gray: #D9D9D9;
-$green: #74DD63;
+$gray: #d9d9d9;
+$green: #74dd63;
 $mid-green: #1bc300;
 $dark-green: #006400;
-$dark-gray: #B0B0B0;
+$dark-gray: #b0b0b0;
 $red-gray: #897373;
-$gradient-green: linear-gradient(248deg, $green 0%, $white 100%);
-$gradient-gray: linear-gradient(248deg, $white 0%, $dark-gray 100%);
 
 //gradient body colors
-$light-gradient-1: #e4f7ba;
-$light-gradient-2: #fefefd;
-$light-gradient-3: #caee92;
-$light-gradient-4: #baeba1;
-$light-gradient-5: #dffbd1;
-
-$dark-gradient-1: #000010;
-$dark-gradient-2: #111111;
-$dark-gradient-3: #060006;
-
+$gradient-green: linear-gradient(248deg, $green 0%, $white 100%);
+$gradient-gray: linear-gradient(248deg, $white 0%, $dark-gray 100%);
 $dark-theme: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
 $light-theme: radial-gradient(ellipse at bottom, #77ffa7 0%, #ffffff 100%);
+$botton-gradient: linear-gradient(90deg, #37ea3b, #26f207, #8af66f, #37ea2b);
 
-// $darkTheme: linear-gradient(
-//   120deg,
-//   $black,
-//   $dark-gradient-1,
-//   $dark-gradient-2,
-//   $dark-gradient-3
-// );
-
-// $lightTheme: linear-gradient(
-//   120deg,
-//   $white,
-//   $light-gradient-1,
-//   $light-gradient-2,
-//   $light-gradient-3,
-//   $light-gradient-4,
-//   $light-gradient-5
-// );
+//optional gradients
+$gradient-lightful-green: linear-gradient(
+  90deg,
+  #03f40f,
+  #d6f441,
+  #24ffcf,
+  #23f403
+);
+$gradient-colorful: linear-gradient(90deg, #03a9f4, #41f4a6, #fce300, #03a9f4);

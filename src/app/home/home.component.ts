@@ -8,11 +8,12 @@ import {
 } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { TemplatesComponent } from './components/templates/templates.component';
+import { BodyComponent } from './components/body/body.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, TemplatesComponent],
+  imports: [CommonModule, HeaderComponent, TemplatesComponent, BodyComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

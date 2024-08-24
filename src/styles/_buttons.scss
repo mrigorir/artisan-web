@@ -18,28 +18,13 @@ button.plans {
   font-weight: bold;
   position: relative;
   z-index: 1;
-}
-
-button.plans-dark {
-  animation: pulse-dark 2s linear infinite;
-  background: linear-gradient(90deg, #03f40f, #d6f441, #24ffcf, #23f403);
-}
-
-button.plans-light {
-  background: linear-gradient(90deg, #03a9f4, #41f4a6, #fce300, #03a9f4);
-  //background: linear-gradient(90deg, #95e984, #c5d4ed, #eee0e0, #b1eac5);
-  //background: $gradient-green;
-  animation: pulse-light 2s linear infinite;
-
-}
-
-button.plans-light,
-button.plans-dark {
+  background: $botton-gradient;
   background-size: 400% 400%;
+  animation: pulse 2s linear infinite, back-light 5s linear infinite;
 }
 
-button.plans-light:before,
-button.plans-dark:before {
+
+button.plans:before {
   content: "";
   position: absolute;
   top: -5px;
@@ -52,26 +37,20 @@ button.plans-dark:before {
   transition: 1s;
 }
 
-@keyframes pulse-dark {
+
+@keyframes back-light {
 	0% {
-		box-shadow: 0 0 0 3px rgba(113, 252, 0, 0.3);
     background-position: 0%;
 	}
 
-	70% {
-		box-shadow: 0 0 0 20px rgba(34, 255, 0, 0);
-	}
-
 	100% {
-		box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
     background-position: 400%;
 	}
 }
 
-@keyframes pulse-light {
+@keyframes pulse {
 	0% {
-		box-shadow: 0 0 0 3px rgb(21, 225, 10);
-    background-position: 0%;
+		box-shadow: 0 0 0 3px rgb(77, 205, 67);
 	}
 
 	70% {
@@ -80,7 +59,6 @@ button.plans-dark:before {
 
 	100% {
 		box-shadow: 0 0 0 0 rgba(4, 240, 4, 0);
-    background-position: 400%;
 	}
 }
 

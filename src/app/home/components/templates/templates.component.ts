@@ -16,15 +16,15 @@ export class TemplatesComponent {
   features = [
     {
       text: 'Suscríbete a un plan y haz que tu web site sea una realidad',
-      src: './assets/images/section-2/ring-section-2.svg'
+      src: './assets/images/section-2/star-section-2.gif'
     },
     {
       text: 'Ahorra tiempo de búsqueda, deja que nosotros nos encarguemos',
-      src: './assets/images/section-2/exclamation-sign-section-2.svg'
+      src: './assets/images/section-2/clock-section-2.gif'
     },
     {
       text: 'Revisaremos la web hasta que quedes 100% satisfecho',
-      src: './assets/images/section-2/blocks-section-2.svg'
+      src: './assets/images/section-2/eye-section-2.gif'
     },
   ]
 }

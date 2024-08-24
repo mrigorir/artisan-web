@@ -1,9 +1,18 @@
 @import "../../styles.scss";
 
+body {
+  //min-height: 100vh;
+  background-attachment: fixed;
+  overflow: hidden;
+  //transform: rotate(-45deg);
+  //overflow-y: auto;
+}
+
+
 .main-content {
   overflow-y: auto;
   height: 2000px;
-  z-index: 100;
+  //z-index: 100;
 }
 
 .darkTheme {
@@ -17,17 +26,4 @@
 .darkTheme,
 .lightTheme {
   background-size: 3000% 3000%;
-  //animation: gradient-animation 5s ease infinite;
 }
-
-// @keyframes gradient-animation {
-//   0% {
-//     background-position: 0% 50%;
-//   }
-//   50% {
-//     background-position: 100% 50%;
-//   }
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
