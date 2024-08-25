@@ -28,6 +28,12 @@
   }
 }
 
+.plop {
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    margin-top: 100px;
+  }
+}
+
 p.body-section-subtext {
   font-size: 25px;
   font-family: 'Raleway';
@@ -56,5 +62,8 @@ p.body-section-subtext {
   @media (min-width: 768px) and (max-width: 1280px) {
     width: 80%;
     margin-left: 150px;
+  }
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    width: 800px;
   }
 }
