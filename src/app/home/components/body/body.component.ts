@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-body',
+  selector: 'section-body',
   standalone: true,
   imports: [
     CommonModule,
@@ -11,4 +11,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './body.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BodyComponent { }
+export class BodyComponent {
+  darkMode = input.required<boolean>();
+  
+}

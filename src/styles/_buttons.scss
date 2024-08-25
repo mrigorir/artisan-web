@@ -11,6 +11,7 @@ button {
   box-shadow: 0 4px 4px 0;
   transition: all ease 1s;
   z-index: 1;
+
 }
 
 button.plans {
@@ -21,6 +22,10 @@ button.plans {
   background: $botton-gradient;
   background-size: 400% 400%;
   animation: pulse 2s linear infinite, back-light 5s linear infinite;
+  @media (max-width: 600px) {
+    font-size: 25px;
+    width: 80%;
+  }
 }
 
 
