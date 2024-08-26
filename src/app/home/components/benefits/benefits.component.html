@@ -1,0 +1,47 @@
+<div class="row mb-5 spacer">
+  <div class="col-md-12">
+    <h1
+      class="benefits-section-title"
+      [ngClass]="darkMode() ? 'text-white' : ''"
+    >
+      Beneficios de la Membresía
+    </h1>
+    <h4
+      class="benefits-section-text mt-5"
+      [ngClass]="darkMode() ? 'text-white' : ''"
+    >
+      Beneficios increíbles, que te harán olvidar a otras agencias de
+      desarrollo.
+    </h4>
+  </div>
+</div>
+
+<div class="row mb-5">
+  <div
+    class="d-flex align-items-center justify-content-evenly flex-wrap"
+  >
+    @for (benefit of benefitsFeatures; track $index) {
+    <div class="col-12 col-md-6 col-lg-4 benefits-section-features my-5">
+      <img
+        [src]="darkMode() ? benefit.src1 : benefit.src2"
+        [alt]="benefit.text"
+        width="200"
+      />
+      <p
+        class="benefits-section-features-text mt-3"
+        [ngClass]="darkMode() ? 'text-white' : ''"
+      >
+        {{ benefit.text }}
+      </p>
+    </div>
+    }
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 d-flex align-items-center justify-content-center">
+    <button class="plans zoom">{{ textButton() }}</button>
+  </div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
