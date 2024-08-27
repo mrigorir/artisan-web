@@ -9,12 +9,20 @@ import {
 import { HeaderComponent } from './components/header/header.component';
 import { TemplatesComponent } from './components/templates/templates.component';
 import { BodyComponent } from './components/body/body.component';
-import { BenefitsComponent } from "./components/benefits/benefits.component";
+import { BenefitsComponent } from './components/benefits/benefits.component';
+import { CustomServicesComponent } from './components/custom-services/custom-services.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, TemplatesComponent, BodyComponent, BenefitsComponent],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    TemplatesComponent,
+    BodyComponent,
+    BenefitsComponent,
+    CustomServicesComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
