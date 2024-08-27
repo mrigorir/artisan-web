@@ -1,0 +1,68 @@
+@import '../../../../styles.scss';
+
+.background-loader {
+  background-color: rgba(0, 0, 0, .95);
+  opacity: 1;
+  animation: fade 1s 3s linear;
+}
+
+.loader {
+  transform: translateX(0);
+  animation: move-right 1s 3s linear;
+}
+
+.hammer {
+  margin-left: 150px;
+  transform: rotate(80deg);
+  transition: all ease-in-out 5s;
+  animation: hammer-stricke 1.5s linear infinite;
+}
+
+.sparkles {
+  opacity: 0;
+  animation: sparkles-shine 1.5s linear infinite;
+}
+
+@keyframes move-right {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fade {
+  0% {
+    //opacity: 1;
+  }
+  50% {
+    //opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hammer-stricke {
+  60% {
+    margin-bottom: -50px;
+    transform: rotate(0);
+  }
+
+  80% {
+    margin-bottom: -40px;
+  }
+
+  90% {
+    margin-bottom: -30px;
+  }
+
+  100% {
+    margin-bottom: -10px;
+    transform: rotate(80deg);
+  }
+}
+
+@keyframes sparkles-shine {
+  100% {
+    opacity: 1;
+  }
+}

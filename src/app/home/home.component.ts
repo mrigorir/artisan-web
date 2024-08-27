@@ -11,9 +11,11 @@ import { TemplatesComponent } from './components/templates/templates.component';
 import { BodyComponent } from './components/body/body.component';
 import { BenefitsComponent } from './components/benefits/benefits.component';
 import { CustomServicesComponent } from './components/custom-services/custom-services.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+
 
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   standalone: true,
   imports: [
     CommonModule,
@@ -22,17 +24,26 @@ import { CustomServicesComponent } from './components/custom-services/custom-ser
     BodyComponent,
     BenefitsComponent,
     CustomServicesComponent,
+    LoaderComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class HomeComponent {
+export default class HomeComponent implements OnInit {
+  fakeArray = new Array(50);
   textButton = signal<string>('Nuestros planes');
   darkMode = signal<boolean>(false);
+  loader = signal<boolean>(true);
   _darkMode = computed(() => this.darkMode());
   _textButton = computed(() => this.textButton());
-  fakeArray = new Array(50);
+  _loader = computed(() => this.loader());
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loader.set(false);
+    }, 4000);
+  }
 
   setTheme(value: boolean) {
     this.darkMode.set(value);
