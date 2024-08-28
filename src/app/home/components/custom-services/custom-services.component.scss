@@ -3,6 +3,7 @@
   font-size: 70px;
   line-height: 87.5px;
   width: 725px;
+  text-shadow: 5px 5px 5px $green;
   @media(max-width: 600px) {
     font-size: 45px;
     text-align: center;
@@ -27,7 +28,9 @@
   border-radius: 40px;
   text-align: center;
   width: 454px;
+  border: solid 1px $black;
   background-color: $white;
+  box-shadow: 0 4px 0 $black;
   @media(max-width: 600px) {
     font-size: 20px;
     line-height: 30px;
