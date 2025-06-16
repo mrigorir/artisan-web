@@ -6,25 +6,12 @@ import {
   OnInit,
   signal,
 } from '@angular/core';
-import { HeaderComponent } from './components/header/header.component';
-import { TemplatesComponent } from './components/templates/templates.component';
-import { BodyComponent } from './components/body/body.component';
-import { BenefitsComponent } from './components/benefits/benefits.component';
-import { CustomServicesComponent } from './components/custom-services/custom-services.component';
-import { LoaderComponent } from './shared/loader/loader.component';
-
 
 @Component({
   selector: 'home',
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
-    TemplatesComponent,
-    BodyComponent,
-    BenefitsComponent,
-    CustomServicesComponent,
-    LoaderComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

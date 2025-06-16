@@ -1,6 +1,8 @@
+@use '../styles/colors';
+
 /* width */
 ::-webkit-scrollbar {
-  width: .5rem;
+  width: .2rem;
 }
 
 /* Track */
@@ -10,7 +12,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $dark-green;
+  background: colors.$dark-green;
   border-radius: 2rem;
 }
 

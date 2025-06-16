@@ -1,28 +1,2 @@
 @import "../../styles.scss";
 
-body {
-  //min-height: 100vh;
-  background-attachment: fixed;
-  overflow: hidden;
-  //transform: rotate(-45deg);
-  //overflow-y: auto;
-}
-
-.main-content {
-  overflow-y: auto;
-  height: 2000px;
-  z-index: 100;
-}
-
-.darkTheme {
-  background: $dark-theme;
-}
-
-.lightTheme {
-  background: $light-theme;
-}
-
-.darkTheme,
-.lightTheme {
-  background-size: 3000% 3000%;
-}
