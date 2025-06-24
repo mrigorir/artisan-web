@@ -1,2 +1,24 @@
-@import "../../styles.scss";
+@use "../../styles/breakpoints" as bp;
 
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  height: 100dvh;
+  @extend %flex;
+}
+
+.title-container {
+  container-type: inline-size;
+  container-name: title;
+  width: 1400px;
+
+  .title {
+    @include bp.container-named(title, xxl) {
+      background-color: aqua;
+    }
+  }
+}

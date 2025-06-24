@@ -1,22 +1,27 @@
+/* ==========================================================================
+   SCROLLBAR
+   ========================================================================== */
 @use '../styles/colors';
+@use '../styles/variables' as vars;
+@use 'sass:map';
 
 /* width */
 ::-webkit-scrollbar {
-  width: .2rem;
+  width: vars.$scrollbar-width;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: map.get(colors.$colors, "green");
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: colors.$dark-green;
-  border-radius: 2rem;
+  background: map.get(colors.$colors, "divider");
+  border-radius: vars.$scrollbar-border-radius;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: map.get(colors.$colors, "scroll-hover");
 }

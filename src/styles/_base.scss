@@ -1,0 +1,30 @@
+/* ==========================================================================
+   BASE STYLES & RESET
+   ========================================================================== */
+
+@use "../styles/variables" as vars;
+@use "../styles/colors";
+@use 'sass:map';
+
+@media screen and (prefers-color-scheme: dark) {
+  *,
+  html,
+  body {
+    background-color: map.get(colors.$colors, "mid-black");
+    color: map.get(colors.$colors, "mid-white");
+  }
+}
+
+*,
+html,
+body,
+.row {
+  letter-spacing: vars.$letter-spacing;
+  font-family: vars.$antonio;
+  padding: vars.$no-padding;
+  margin: vars.$no-margin;
+}
+
+.spacer {
+  margin-top: vars.$spacer;
+}

@@ -1,0 +1,72 @@
+/* ==========================================================================
+   BREAKPOINTS - @MEDIA & @CONTAINER
+   ========================================================================== */
+
+@use "sass:map";
+
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+  "xxxl": 1800px,
+);
+
+// @media
+@mixin media-quey($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$breakpoint}' no existe en $breakpoints";
+  }
+}
+
+/* ESTA ES LA FORMA DE INCLUIR LOS @MEDIA EN EL CODIGO:
+
+  .container {
+    @include bp.respond-to(xs) {
+      font-size: 3rem;
+      max-width: 100%;
+    }
+
+    @include bp.respond-to(md) {
+      font-size: 2rem;
+      max-width: 80%;
+    }
+
+    @include bp.respond-to(xl) {
+      font-size: 2rem;
+      max-width: 80%;
+    }
+  }
+*/
+
+// @container con nombre
+@mixin container-named($container-name, $breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $size: map.get($breakpoints, $breakpoint);
+
+    @container #{$container-name} (min-width: #{$size}) {
+      @content;
+    }
+  } @else {
+    @error "Container breakpoint '#{$breakpoint}' no existe en $container-breakpoints";
+  }
+}
+
+/* ESTA ES LA FORMA DE INCLUIR LOS @CONTAINER CON NOMBRE EN EL CODIGO:
+
+.card-wrapper {
+  container-type: inline-size;
+  container-name: card-container;
+}
+
+.card {
+  @include container-named("card-container", md) {
+    background: lightblue;
+  }
+} */

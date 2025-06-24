@@ -1,4 +1,10 @@
-@use './styles/colors'as colors;
-@use './styles/fonts' as fonts;
-@use './styles/scrollbar' as scrollbar;
-@use './styles/global' as global;
+/* ==========================================================================
+   BASE STYLES & RESET
+   ========================================================================== */
+
+@use "./styles/colors" as colors;
+@use "./styles/fonts" as fonts;
+@use "./styles/scrollbar" as scrollbar;
+@use "./styles/base" as global;
+@use "./styles/variables" as vars;
+@use "./styles/breakpoints" as bp;
