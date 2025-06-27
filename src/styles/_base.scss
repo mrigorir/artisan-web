@@ -2,12 +2,12 @@
    BASE STYLES & RESET
    ========================================================================== */
 
+@use "sass:map";
+
 @use "../styles/variables" as vars;
 @use "../styles/colors";
-@use 'sass:map';
 
 @media screen and (prefers-color-scheme: dark) {
-  *,
   html,
   body {
     background-color: map.get(colors.$colors, "mid-black");
@@ -18,8 +18,12 @@
 *,
 html,
 body,
-.row {
+.row,
+.container,
+[class^="col-"],
+.container-fluid {
   letter-spacing: vars.$letter-spacing;
+  font-size: vars.$base-font-size;
   font-family: vars.$antonio;
   padding: vars.$no-padding;
   margin: vars.$no-margin;

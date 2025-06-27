@@ -1,0 +1,26 @@
+.section-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  //grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+  gap: 0;
+}
+
+.header-content {
+  grid-area: header;
+}
+
+.main-content {
+  grid-area: main;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  grid-area: footer;
+}
