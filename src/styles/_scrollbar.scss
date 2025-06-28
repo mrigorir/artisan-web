@@ -12,12 +12,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: map.get(colors.$colors, "green");
+  background: map.get(colors.$colors, "divider");
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: map.get(colors.$colors, "divider");
+  background: map.get(colors.$colors, "green");
   border-radius: vars.$scrollbar-border-radius;
 }
 
